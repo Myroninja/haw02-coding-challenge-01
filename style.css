@@ -1,0 +1,126 @@
+/* -------- Global Styles -------- */
+
+/* --------------------------------------------------------- */
+
+/* -------- Font Styles -------- */
+.play-regular {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.play-bold {
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.play-nav {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+}
+
+.indie-flower-regular {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.indie-flower-tagline {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 34px;
+}
+/* --------------------------------------------------------- */
+
+/* -------- Navigation Bar Styles -------- */
+.top-bar {
+    position: fixed; /* Fixed relative to the viewport; it stays in place even if the page is scrolled. */
+    display: flex;
+    flex-direction: row;
+    top: 0; /* Reset positioning from the top to 0/nothing */
+    left: 0; /* To allow horizontal positioning on the page. */
+    width: 100%; /* Percentage used to better support responsiveness, although that's not required as much in this challenge. */
+    padding: 14px; /* This is the desired space above and below the nav element, and no space either side as I want the width to cover 100% of the viewport. */
+    z-index: 998; /* Almost-maximum index level to ensure this element stays on top of others. */
+    background-color: #fff7f7; /* My choice of a slightly off white colour. */
+    border: 1px solid #000000;
+    justify-content: space-between;
+}
+
+.navigation-main {
+    width: 70%;
+    height: 100px;
+    display: flex;
+    align-self: center;
+}
+
+.nav-ul {
+    list-style: none; /* To remove list item markers. */
+    padding: 0; /* No padding is needed for the unordered list within the nav. Eliminates any browser-defaults that may be applied when rendering. */
+    margin: 0; /* Same as padding. */
+    display: flex; /* Allows the nested ul items to be responsive to various screen sizes. This maintains the stretch across the screen (100% width). */
+    justify-content: center; /* Maintains a central position. */
+    align-items: center; /* Align items to the center regardless of flex items. */
+    height: 100%;
+    background-color: #848484;
+    box-shadow: 2px 5px 5px #4a4a4a;
+    border-radius: 68px;
+}
+
+.nav-ul li {
+    margin: 0 45px; /* Desired spacing between each list item. */
+}
+
+.nav-ul a {
+    text-decoration: none; /* Remove default formatting from anchor tags (e.g. underline). */
+    color: white;
+    transition: color 0.3s; /* To change the text colour and show coloured borders above and below - will be triggered by mouse hover. */
+    padding-bottom: 5px; /* Space between the list item and the respective mouse-hover borders. */
+}
+/* --------------------------------------------------------- */
+
+/* -------- Header Styles -------- */
+.logo-container {
+    max-height: 173.750px;
+    align-self: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.logo {
+    max-width: 300px;
+    cursor: pointer;
+}
+
+.tagline-container {
+    max-height: 173.750px;
+    align-self: center;
+    justify-content: center;
+    position: absolute;
+    top: 130px;
+}
+
+.tagline-container h1 {
+    white-space: nowrap;
+    margin: 0;
+    text-align: center;
+}
+/* --------------------------------------------------------- */
+
+/* -------- Body Styles -------- */
+
+/* --------------------------------------------------------- */
+
+/* -------- Footer Styles -------- */
+
+/* --------------------------------------------------------- */
+
+/* -------- Media Queries -------- */
+
+/* --------------------------------------------------------- */
