@@ -3,36 +3,41 @@
 /* --------------------------------------------------------- */
 
 /* -------- Font Styles -------- */
-.play-regular {
-  font-family: "Play", sans-serif;
+.racing {
+  font-family: "Racing Sans One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.play-bold {
-  font-family: "Play", sans-serif;
+.racing-nav {
+  font-family: "Racing Sans One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+}
+
+.andika-regular {
+  font-family: "Andika", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.andika-bold {
+  font-family: "Andika", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
-.play-nav {
-  font-family: "Play", sans-serif;
+.andika-regular-italic {
+  font-family: "Andika", sans-serif;
   font-weight: 400;
-  font-style: normal;
-  font-size: 48px;
+  font-style: italic;
 }
 
-.indie-flower-regular {
-  font-family: "Indie Flower", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.indie-flower-tagline {
-  font-family: "Indie Flower", cursive;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 34px;
+.andika-bold-italic {
+  font-family: "Andika", sans-serif;
+  font-weight: 700;
+  font-style: italic;
 }
 /* --------------------------------------------------------- */
 
@@ -47,15 +52,15 @@
     padding: 14px; /* This is the desired space above and below the nav element, and no space either side as I want the width to cover 100% of the viewport. */
     z-index: 998; /* Almost-maximum index level to ensure this element stays on top of others. */
     background-color: #fff7f7; /* My choice of a slightly off white colour. */
-    border: 1px solid #000000;
     justify-content: space-between;
+    box-shadow: 0 0 4px 4px #ffffff;
 }
 
 .navigation-main {
-    width: 70%;
     height: 100px;
     display: flex;
     align-self: center;
+    margin-right: calc(100% / 50);
 }
 
 .nav-ul {
@@ -66,7 +71,7 @@
     justify-content: center; /* Maintains a central position. */
     align-items: center; /* Align items to the center regardless of flex items. */
     height: 100%;
-    background-color: #848484;
+    background-color: #417e7a;
     box-shadow: 2px 5px 5px #4a4a4a;
     border-radius: 68px;
 }
@@ -79,13 +84,13 @@
     text-decoration: none; /* Remove default formatting from anchor tags (e.g. underline). */
     color: white;
     transition: color 0.3s; /* To change the text colour and show coloured borders above and below - will be triggered by mouse hover. */
-    padding-bottom: 5px; /* Space between the list item and the respective mouse-hover borders. */
 }
 /* --------------------------------------------------------- */
 
 /* -------- Header Styles -------- */
 .logo-container {
     max-height: 173.750px;
+    margin-left: calc(100% / 50);
     align-self: center;
     box-sizing: border-box;
     display: flex;
@@ -114,6 +119,29 @@
 /* --------------------------------------------------------- */
 
 /* -------- Body Styles -------- */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin-top: 204px;
+}
+
+.bg-container {
+    background-image: url('images/index/hero-2.png'); /* The background image for the content area. */
+    background-size: cover; /* To ensure the background image covers the entire container. */
+    background-position: top; /* To ensure the background image is centered within the container. */
+    background-repeat: no-repeat; /* To ensure the background image does not repeat. */
+    box-sizing: border-box; /* To ensure the padding and border are included in the total width and height of the container. */
+    position: relative; /* To allow the nested elements to be positioned relative to this container. */
+    display: flex; /* Similar to the above. */
+    flex-direction: column; /* To allow the nested elements to be positioned in a vertical stack. */
+    justify-content: start; /* To ensure the content is centered vertically within the container. */
+    height: 70vh; /* To ensure the container takes up the full height of the viewport. */
+    padding: 0px; /* To ensure the content is not flush to the edges of the container. */
+}
 
 /* --------------------------------------------------------- */
 
