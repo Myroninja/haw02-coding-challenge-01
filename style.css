@@ -43,21 +43,19 @@
 
 /* -------- Navigation Bar Styles -------- */
 .top-bar {
-    position: fixed; /* Fixed relative to the viewport; it stays in place even if the page is scrolled. */
     display: flex;
     flex-direction: row;
     top: 0; /* Reset positioning from the top to 0/nothing */
     left: 0; /* To allow horizontal positioning on the page. */
     width: 100%; /* Percentage used to better support responsiveness, although that's not required as much in this challenge. */
-    padding: 14px; /* This is the desired space above and below the nav element, and no space either side as I want the width to cover 100% of the viewport. */
-    z-index: 998; /* Almost-maximum index level to ensure this element stays on top of others. */
+    z-index: 1000; /* Almost-maximum index level to ensure this element stays on top of others. */
     background-color: #fff7f7; /* My choice of a slightly off white colour. */
     justify-content: space-between;
-    box-shadow: 0 0 4px 4px #ffffff;
+    height: 12vh;
+    box-sizing: border-box;
 }
 
 .navigation-main {
-    height: 100px;
     display: flex;
     align-self: center;
     margin-right: calc(100% / 50);
@@ -65,14 +63,13 @@
 
 .nav-ul {
     list-style: none; /* To remove list item markers. */
-    padding: 0; /* No padding is needed for the unordered list within the nav. Eliminates any browser-defaults that may be applied when rendering. */
+    padding: 10px; /* No padding is needed for the unordered list within the nav. Eliminates any browser-defaults that may be applied when rendering. */
     margin: 0; /* Same as padding. */
     display: flex; /* Allows the nested ul items to be responsive to various screen sizes. This maintains the stretch across the screen (100% width). */
     justify-content: center; /* Maintains a central position. */
     align-items: center; /* Align items to the center regardless of flex items. */
-    height: 100%;
-    background-color: #417e7a;
-    box-shadow: 2px 5px 5px #4a4a4a;
+    height: 70%;
+    background-color: rgba(2, 2, 3, 1);
     border-radius: 68px;
 }
 
@@ -82,7 +79,7 @@
 
 .nav-ul a {
     text-decoration: none; /* Remove default formatting from anchor tags (e.g. underline). */
-    color: white;
+    color: #ffffff;
     transition: color 0.3s; /* To change the text colour and show coloured borders above and below - will be triggered by mouse hover. */
 }
 /* --------------------------------------------------------- */
@@ -125,22 +122,36 @@ body {
     padding: 0;
 }
 
-main {
-    margin-top: 204px;
-}
-
 .bg-container {
-    background-image: url('images/index/hero-2.png'); /* The background image for the content area. */
+    background-image: url('images/index/hero-3.png'); /* The background image for the content area. */
     background-size: cover; /* To ensure the background image covers the entire container. */
     background-position: top; /* To ensure the background image is centered within the container. */
     background-repeat: no-repeat; /* To ensure the background image does not repeat. */
     box-sizing: border-box; /* To ensure the padding and border are included in the total width and height of the container. */
     position: relative; /* To allow the nested elements to be positioned relative to this container. */
     display: flex; /* Similar to the above. */
-    flex-direction: column; /* To allow the nested elements to be positioned in a vertical stack. */
-    justify-content: start; /* To ensure the content is centered vertically within the container. */
-    height: 70vh; /* To ensure the container takes up the full height of the viewport. */
+    flex-direction: row; /* To allow the nested elements to be positioned in a vertical stack. */
+    justify-content: center; /* To ensure the content is centered vertically within the container. */
+    height: 80vh; /* To ensure the container takes up the full height of the viewport. */
     padding: 0px; /* To ensure the content is not flush to the edges of the container. */
+    z-index: -1;
+}
+
+.name-box {
+    display: flex;
+    align-self: center;
+    color: #ffffff;
+    font-size: clamp(1rem, 3vw + 1rem, 4.5rem);
+    
+}
+
+.name-box h1 {
+    margin: 0;
+    text-align: center;
+    letter-spacing: 1rem;
+    background-color: rgba(120, 120, 120, 0.4);
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
 /* --------------------------------------------------------- */
@@ -156,15 +167,16 @@ footer {
 .footer-box {
     left: 0;
     top: 0;
-    height: 20vh;
+    height: 8vh;
     width: 100%;
-    padding-top: 5vh;
 }
 
 .footer-text {
     display: flex;
     justify-content: space-between;
     padding: 0px 2vw;
+    height: 100%;
+    align-items: center;
 }
 
 .footer-nav {
