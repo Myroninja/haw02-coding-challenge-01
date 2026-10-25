@@ -33,14 +33,10 @@
 /* -------- Navigation Bar Styles -------- */
 .top-bar {
     display: flex;
-    flex-direction: row;
-    top: 0; /* Reset positioning from the top to 0/nothing */
-    left: 0; /* To allow horizontal positioning on the page. */
     width: 100%; /* Percentage used to better support responsiveness, although that's not required as much in this challenge. */
-    z-index: 1000; /* Almost-maximum index level to ensure this element stays on top of others. */
-    background-color: #fff7f7; /* My choice of a slightly off white colour. */
+    position: relative;
     justify-content: space-between;
-    height: 12vh;
+    height: 15vh;
     box-sizing: border-box;
 }
 
@@ -58,8 +54,13 @@
     justify-content: center; /* Maintains a central position. */
     align-items: center; /* Align items to the center regardless of flex items. */
     height: 70%;
-    background-color: rgba(2, 2, 3, 1);
     border-radius: 68px;
+    background-color: rgba(255, 255, 255, 1);
+    transition: background-color 0.3s;
+}
+
+.nav-ul:hover {
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .nav-ul li {
@@ -68,19 +69,19 @@
 
 .nav-ul a {
     text-decoration: none; /* Remove default formatting from anchor tags (e.g. underline). */
-    color: #ffffff;
-    transition: color 0.15s; /* To change the text colour and show coloured borders above and below - will be triggered by mouse hover. */
+    color: #000000;
+    transition: color 0.15s;
 }
 
 .nav-ul a:hover {
-    color:#67D9F0;
+    color:#B21F24;
 }
 /* --------------------------------------------------------- */
 
 /* -------- Header Styles -------- */
 .logo-container {
     max-height: 173.750px;
-    margin-left: calc(100% / 50);
+    margin-left: calc(100% / 300);
     align-self: center;
     box-sizing: border-box;
     display: flex;
@@ -93,19 +94,6 @@
     cursor: pointer;
 }
 
-.tagline-container {
-    max-height: 173.750px;
-    align-self: center;
-    justify-content: center;
-    position: absolute;
-    top: 130px;
-}
-
-.tagline-container h1 {
-    white-space: nowrap;
-    margin: 0;
-    text-align: center;
-}
 /* --------------------------------------------------------- */
 
 /* -------- Body Styles -------- */
@@ -116,50 +104,53 @@ body {
 }
 
 .bg-container {
-    background-image: url('images/index/hero-3.png'); /* The background image for the content area. */
+    background-image: url('images/index/hero-animated.gif'); /* The background image for the content area. */
     background-size: cover; /* To ensure the background image covers the entire container. */
     background-position: top; /* To ensure the background image is centered within the container. */
     background-repeat: no-repeat; /* To ensure the background image does not repeat. */
     box-sizing: border-box; /* To ensure the padding and border are included in the total width and height of the container. */
     position: relative; /* To allow the nested elements to be positioned relative to this container. */
-    display: flex; /* Similar to the above. */
-    flex-direction: row; /* To allow the nested elements to be positioned in a vertical stack. */
+    display: block; /* Similar to the above. */
+    flex-direction: column; /* To allow the nested elements to be positioned in a vertical stack. */
     justify-content: center; /* To ensure the content is centered vertically within the container. */
-    height: 80vh; /* To ensure the container takes up the full height of the viewport. */
+    height: 96vh; /* To ensure the container takes up the full height of the viewport. */
     padding: 0px; /* To ensure the content is not flush to the edges of the container. */
-    z-index: -1;
+    z-index: 999;
 }
 
 .name-box {
-    align-self: center;
-    color: #ffffff;
-    flex-direction: column;
-    margin: 0 2vw;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: left;
+    margin: 24vh 2vw;
+    color: #ffffff;
+    background-color: rgba(120, 120, 120, 0.4);
+    border-radius: 3rem;
+    padding: 2vh 2vw;
+    max-width: 55vw;
+    transition: background-color 0.3s;
+}
+
+.name-box:hover {
+    background-color: rgba(120, 120, 120, 0.7);
 }
 
 .name-box h1 {
     margin: 0;
-    text-align: center;
+    text-align: left;
     letter-spacing: 1rem;
-    background-color: rgba(120, 120, 120, 0.4);
-    border-radius: 5rem;
     font-size: clamp(1rem, 3vw + 1rem, 4.5rem);
-    padding: 1rem;
-    max-width: 70vw;
 }
 
 .name-box p {
     margin: 0;
     margin-top: 1vh;
+    margin-bottom: 1vh;
     font-size: clamp(1rem, 0.8vw + 1rem, 2rem);
-    background-color: rgba(120, 120, 120, 0.8);
     border-radius: 1.5rem;
-    padding: 1rem;
     display: inline-block;
-    max-width: 70%;
-    text-align: center;
+    text-align: left;
+    font-weight: 600;
 }
 
 /* --------------------------------------------------------- */
@@ -175,7 +166,7 @@ footer {
 .footer-box {
     left: 0;
     top: 0;
-    height: 8vh;
+    height: 4vh;
     width: 100%;
 }
 
