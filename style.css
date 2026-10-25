@@ -16,29 +16,18 @@
   font-size: 30px;
 }
 
-.andika-regular {
-  font-family: "Andika", sans-serif;
+.alumni-regular {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.andika-bold {
-  font-family: "Andika", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.andika-regular-italic {
-  font-family: "Andika", sans-serif;
+.alumni-italic {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
   font-weight: 400;
   font-style: italic;
 }
 
-.andika-bold-italic {
-  font-family: "Andika", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
 /* --------------------------------------------------------- */
 
 /* -------- Navigation Bar Styles -------- */
@@ -80,7 +69,11 @@
 .nav-ul a {
     text-decoration: none; /* Remove default formatting from anchor tags (e.g. underline). */
     color: #ffffff;
-    transition: color 0.3s; /* To change the text colour and show coloured borders above and below - will be triggered by mouse hover. */
+    transition: color 0.15s; /* To change the text colour and show coloured borders above and below - will be triggered by mouse hover. */
+}
+
+.nav-ul a:hover {
+    color:#67D9F0;
 }
 /* --------------------------------------------------------- */
 
@@ -138,11 +131,12 @@ body {
 }
 
 .name-box {
-    display: flex;
     align-self: center;
     color: #ffffff;
-    font-size: clamp(1rem, 3vw + 1rem, 4.5rem);
-    
+    flex-direction: column;
+    margin: 0 2vw;
+    display: flex;
+    align-items: center;
 }
 
 .name-box h1 {
@@ -150,8 +144,22 @@ body {
     text-align: center;
     letter-spacing: 1rem;
     background-color: rgba(120, 120, 120, 0.4);
+    border-radius: 5rem;
+    font-size: clamp(1rem, 3vw + 1rem, 4.5rem);
     padding: 1rem;
-    border-radius: 1rem;
+    max-width: 70vw;
+}
+
+.name-box p {
+    margin: 0;
+    margin-top: 1vh;
+    font-size: clamp(1rem, 0.8vw + 1rem, 2rem);
+    background-color: rgba(120, 120, 120, 0.8);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    display: inline-block;
+    max-width: 70%;
+    text-align: center;
 }
 
 /* --------------------------------------------------------- */
