@@ -60,9 +60,9 @@
     transition: background-color 0.3s;
 }
 
-.nav-ul:hover {
+/* .nav-ul:hover {
     background-color: rgba(255, 255, 255, 0.7);
-}
+} */
 
 .nav-ul li {
     margin: 0 45px; /* Desired spacing between each list item. */
@@ -111,12 +111,12 @@ body {
     background-repeat: no-repeat; /* To ensure the background image does not repeat. */
     box-sizing: border-box; /* To ensure the padding and border are included in the total width and height of the container. */
     position: relative; /* To allow the nested elements to be positioned relative to this container. */
-    display: block; /* Similar to the above. */
-    flex-direction: column; /* To allow the nested elements to be positioned in a vertical stack. */
+    display: flex; /* Similar to the above. */
+    flex-wrap: wrap;
     justify-content: center; /* To ensure the content is centered vertically within the container. */
     height: 96vh; /* To ensure the container takes up the full height of the viewport. */
     padding: 0px; /* To ensure the content is not flush to the edges of the container. */
-    z-index: 999;
+    z-index: 1;
 }
 
 .name-box {
@@ -125,15 +125,20 @@ body {
     margin: 24vh 2vw;
     color: #ffffff;
     background-color: rgba(120, 120, 120, 0.4);
+    box-shadow: none;
     border-radius: 3rem;
     padding: 2vh 2vw;
     max-width: 30vw;
-    transition: background-color 0.3s;
-    z-index: 1000;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
 }
 
-.name-box:hover {
-    background-color: rgba(120, 120, 120, 0.7);
+.name-box:hover,
+.greeting-box:hover {
+    background-color: rgba(120, 120, 120, 0.8);
+    box-shadow: inset 0px 0px 40px 8px rgba(200,200,200,0.6);
 }
 
 .name-box h1 {
@@ -143,7 +148,8 @@ body {
     font-size: clamp(1rem, 3vw + 1rem, 4.5rem);
 }
 
-.name-box p {
+.name-box p,
+.greeting-box p {
     margin: 0;
     margin-top: 1vh;
     margin-bottom: 1vh;
@@ -152,6 +158,24 @@ body {
     display: inline-block;
     text-align: left;
     font-weight: 600;
+}
+
+.greeting-box {
+    display: flex;
+    flex-direction: column;
+    margin: 24vh 10vw;
+    color: #ffffff;
+    background-color: rgba(120, 120, 120, 0.6);
+    border-radius: 3rem;
+    padding: 2vh 2vw;
+    max-width: 30vw;
+    transition: background-color 0.3s, box-shadow 0.15s;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    float: top;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-container {
