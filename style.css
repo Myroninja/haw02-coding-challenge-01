@@ -32,67 +32,50 @@
 
 /* -------- Navigation Bar Styles -------- */
 .top-bar {
-    display: flex;
-    width: 100%; /* Percentage used to better support responsiveness, although that's not required as much in this challenge. */
-    position: relative;
-    justify-content: space-between;
-    height: 15vh;
-    box-sizing: border-box;
-    z-index: 1000;
+    display: flex; /* Allows ease with positioning of contained elements. */
+    width: 100%; /* Percentage used to better support responsiveness. */
+    justify-content: space-between; /* This keeps the logo and nav bar on either side of the top of the page. */
+    z-index: 1000; /* Ensures the logo and navigation are available by staying above all other elements. */
 }
 
 .navigation-main {
-    display: flex;
-    align-self: center;
-    margin-right: calc(100% / 50);
+    align-self: center; /* This keeps the bar central vertically relative to the logo/any other elements within the parent container. */
+    margin-right: calc(100% / 50); /* The desired margin away from the right edge of the viewport. Using a percentage-based calculation helps with responsiveness. */
 }
 
 .nav-ul {
-    list-style: none; /* To remove list item markers. */
-    padding: 10px; /* No padding is needed for the unordered list within the nav. Eliminates any browser-defaults that may be applied when rendering. */
-    margin: 0; /* Same as padding. */
-    display: flex; /* Allows the nested ul items to be responsive to various screen sizes. This maintains the stretch across the screen (100% width). */
-    justify-content: center; /* Maintains a central position. */
-    align-items: center; /* Align items to the center regardless of flex items. */
-    height: 70%;
-    border-radius: 68px;
-    background-color: rgba(255, 255, 255, 1);
-    /* transition: background-color 0.3s; */
+    list-style: none; /* Removes list item markers. */
+    padding: 10px; /* A little padding is needed for the unordered list within the nav. Resets any browser-defaults that may be pre-applied. */
+    margin: 0; /* Resets any browser defaults. */
+    display: flex; /* Allows the nested ul items to be easily positioned in a row along with any other additional positional styling. */
+    border-radius: 68px; /* Completely rounded edges by choice. May need to adjust unit of choice for better responsiveness. */
+    background-color: rgba(255, 255, 255, 1); /* Desired background colour - a strong white to contrast the darker background & vivid highlights. */
 }
 
-/* .nav-ul:hover {
-    background-color: rgba(255, 255, 255, 0.7);
-} */
-
 .nav-ul li {
-    margin: 0 45px; /* Desired spacing between each list item. */
+    margin: 0 45px; /* Desired spacing between each list item. May need to adjust unit of choice for better responsiveness. */
 }
 
 .nav-ul a {
     text-decoration: none; /* Remove default formatting from anchor tags (e.g. underline). */
-    color: #000000;
-    transition: color 0.15s;
+    color: #000000; /* Solid black for best possible contrast to the white background. */
+    transition: color 0.15s; /* Short transition time for the text colour - gives a snappy and direct feel. */
 }
 
 .nav-ul a:hover {
-    color:#B21F24;
+    color:#B21F24; /* A saturated but restricted red to compliment the various highlights throughout the page whilst remaining readable when hovered. */
 }
 /* --------------------------------------------------------- */
 
 /* -------- Header Styles -------- */
 .logo-container {
-    max-height: 173.750px;
-    margin-left: calc(100% / 300);
-    align-self: center;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    margin-left: calc(100% / 250); /* The desired margin away from the left edge of the viewport. Using a percentage-based calculation helps with responsiveness. */
+    align-self: center; /* Keeps the image within the center of this container, vertically. */
 }
 
 .logo {
-    max-width: 300px;
-    cursor: pointer;
+    max-width: 300px; /* A hard cap of the logo size. May need to adjust unit of choice for better responsiveness. */
+    cursor: pointer; /* Indicates the user can click the image. Doing so opens the Home/index page. */
 }
 
 /* --------------------------------------------------------- */
@@ -100,176 +83,150 @@
 /* -------- Body Styles -------- */
 
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Reset browser defaults & ensures a flush edge from the content & viewport edge. */
+    padding: 0; /* As above. */
 }
 
 .bg-container {
-    background-image: url('images/index/bg-animated-plain.gif'); /* The background image for the content area. */
-    background-size: cover; /* To ensure the background image covers the entire container. */
-    background-position: top; /* To ensure the background image is centered within the container. */
-    background-repeat: no-repeat; /* To ensure the background image does not repeat. */
-    box-sizing: border-box; /* To ensure the padding and border are included in the total width and height of the container. */
-    position: relative; /* To allow the nested elements to be positioned relative to this container. */
-    display: flex; /* Similar to the above. */
-    flex-wrap: wrap;
-    justify-content: center; /* To ensure the content is centered vertically within the container. */
-    height: 96vh; /* To ensure the container takes up the full height of the viewport. */
-    padding: 0px; /* To ensure the content is not flush to the edges of the container. */
-    z-index: 1;
+    background-image: url('images/index/bg-animated-plain.gif'); /* The animated background image for the content area. */
+    background-size: cover; /* Ensures the background image covers the entire container. */
+    background-position: top; /* Centers the background image within the container. */
+    background-repeat: no-repeat; /* Prevents the background image from repeating. */
+    display: flex; /* Allows the nested items to be easily positioned to design. */
+    flex-wrap: wrap; /* Allows 'flexible' items to wrap within the flexbox. This enabled the positioning the two text boxes beside each other. */
+    justify-content: center; /* Centers the nested elements within the container, horizontally. */
+    height: 96vh; /* The container will only cover 96% of the viewport height. Great for responsivness as it's relative and not absolute. */
+    padding: 0px; /* Ensures the nested content is flush to the edges of the container. */
 }
 
 .hero-container {
-    z-index: 998;
-    display: flex;
-    position: absolute;
-    top: 0;
-    /* width: 100%; */
-    object-fit: contain;
-    height: 92vh;
-    justify-content: center;
-    margin-top: 4vh;
-}
-
-.hero-img {
-    position: relative;
-    top: 0;
-    left: 0;
+    z-index: 998; /* Keeps the image above the background and the majority of other elements. */
+    display: flex; /* Allows the nested items to be easily positioned to design. */
+    position: absolute; /* Maintains the position of the container regardless of other influence. */
+    height: 92vh; /* Desired height for the container relative to the vh values given to the footer & main .bg-container. */
+    margin-top: 4vh; /* Pushes the image down the page to prevent unwanted overlap of the navigation & image. */
 }
 
 .name-box {
-    display: flex;
-    flex-direction: column;
-    margin: 24vh 2vw;
-    color: #ffffff;
-    background-color: rgba(120, 120, 120, 0.4);
-    box-shadow: none;
-    border-radius: 3rem;
-    padding: 2vh 2vw;
-    max-width: 30vw;
-    transition: background-color 0.3s, box-shadow 0.15s, color 0.3s;
-    z-index: 10;
-    align-items: center;
-    justify-content: center;
+    display: flex; /* Allows the nested items to be easily positioned to design. */
+    margin: 24vh 2vw; /* Margin to maintain the desired shape of the container. */
+    color: #ffffff; /* Bright contrasting text colour for easy reading. */
+    background-color: rgba(80, 80, 80, 0.4); /* A transparent background colour to blend with the overall design. */
+    box-shadow: none; /* Required to allow the mouse hover inset box-shadow to transition in - without this, the effect appears with no easing. */
+    border-radius: 3rem; /* Rounded edges to maintain the overall design. */
+    padding: 2vh 2vw; /* Desired padding within the container. The font of choice (Racing Sans One) sits to the left a lot, so a gap is required to offset this. */
+    max-width: 30vw; /* Capped width which also allows the flex-wrapping to work as intended. */
+    transition: background-color 0.3s, box-shadow 0.15s, color 0.3s; /* Transitions for background colour, box-shadow, and text colour. Short timings for a snappy feel. */
+    align-items: center; /* Keeps the items within the center of this container, vertically. */
+    justify-content: center; /* Keeps the items within the center of this container, horizontically. */
 }
 
 .name-box:hover,
 .greeting-box:hover {
-    background-color: rgba(130, 130, 130, 0.9);
-    box-shadow: inset 0px 0px 20px 8px rgba(210,210,210,0.8);
-    color: black;
+    background-color: rgba(130, 130, 130, 0.9); /* Loses most of the transparency and gains brightness on hover - helps with reading the black text. */
+    box-shadow: inset 0px 0px 20px 8px rgba(210,210,210,0.8); /* An effect to give the illusion of illumination on hover. */
+    color: black; /* Switctes white text to black on hover - helps with reading against the brighter, less transparent background. */
 }
 
 .name-box h1 {
-    margin: 0;
-    text-align: left;
-    letter-spacing: 1rem;
-    font-size: clamp(1rem, 3vw + 1rem, 4.5rem);
+    margin: 0; /* Removes default margins. */
+    text-align: left; /* Ensures the text is aligned to the left. */
+    letter-spacing: 1rem; /* Desired spacing between each letter of text. */
+    font-size: clamp(1rem, 3vw + 1rem, 4.5rem); /* A formula to set the minimum, desired, and maximum text sizes for bettter responsiveness. */
 }
 
-.name-box p,
 .greeting-box p {
-    margin: 0;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-    font-size: clamp(1rem, 0.8vw + 1rem, 2rem);
-    border-radius: 1.5rem;
-    display: inline-block;
-    text-align: left;
-    font-weight: 600;
+    margin: 1vh 0; /* Removes default margins & replaces them with a responsive(ish) top and bottom margin. */
+    font-size: clamp(1rem, 0.8vw + 1rem, 2rem); /* A formula to set the minimum, desired, and maximum text sizes for bettter responsiveness. */
+    border-radius: 1.5rem; /* Rounded edges to maintain the overall design. */
+    text-align: left; /* Ensures the text is aligned to the left. */
+    font-weight: 600; /* Added weight to the font of choice (Alumni Regular) for better reading. */
 }
 
 .greeting-box {
-    display: flex;
-    flex-direction: column;
-    margin: 24vh 10vw;
-    color: #ffffff;
-    background-color: rgba(100, 100, 100, 0.7);
-    border-radius: 3rem;
-    padding: 2vh 2vw;
-    max-width: 30vw;
-    transition: background-color 0.3s, box-shadow 0.15s, color 0.3s;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    float: top;
-    align-items: center;
-    justify-content: center;
+    display: flex; /* Allows the nested items to be easily positioned to design. */
+    flex-direction: column; /* Places the nested elements in a vertical arrangement. */
+    margin: 24vh 10vw; /* Margin to maintain the desired shape of the container. */
+    color: #ffffff; /* Bright contrasting text colour for easy reading. */
+    background-color: rgba(70, 70, 70, 0.7); /* A semi-transparent background colour to blend with the overall design. */
+    border-radius: 3rem; /* Rounded edges to maintain the overall design. */
+    padding: 2vh 2vw; /* Desired padding within the container. */
+    max-width: 30vw; /* Capped width which also allows the flex-wrapping to work as intended. */
+    transition: background-color 0.3s, box-shadow 0.15s, color 0.3s; /* Transitions for background colour, box-shadow, and text colour. Short timings for a snappy feel. */
+    z-index: 1000; /* Ensures this container sits above the hero image for a layered effect. */
+    align-items: center; /* Keeps the items within the center of this container, horizontically (due to column flex-direction). */
+    justify-content: center; /* Keeps the items within the center of this container, vertically (due to column flex-direction). */
 }
 
 .read-more {
-    margin: 0;
-    border: none;
-    padding: 0.5vh 1vh;
-    font-size: clamp(0.5rem, 0.4vw + 1rem, 2rem);
-    border-radius: 1rem;
-    align-items: center;
-    text-align: center;
-    transition: color 0.3s, background-color 0.3s;
-    cursor: pointer;
-    color: #ffffff;
-    background-color: rgba(225, 225, 225, 0.1);
+    margin: 0; /* Removes default margins. */
+    border: none; /* Removes default border. */
+    padding: 0.5vh 1vh; /* Desired padding within the button. */
+    font-size: clamp(0.5rem, 0.4vw + 1rem, 2rem); /* A formula to set the minimum, desired, and maximum text sizes for bettter responsiveness. */
+    border-radius: 1rem; /* Rounded edges to maintain the overall design. */
+    text-align: center; /* Ensures the text is aligned in the center. */
+    transition: color 0.3s, background-color 0.3s; /* Transitions for text colour and background colour. Short timings for a snappy feel. */
+    cursor: pointer; /* Further indicator that the user can click the button. Doing so opens the About page. */
+    color: #ffffff; /* Bright contrasting text colour for easy reading. */
+    background-color: rgba(225, 225, 225, 0.1); /* A transparent background colour to blend with the parent container. */
 }
 
 .read-more:hover {
-    color:#B21F24;
-    background-color: rgba(255, 255, 255, 0.8);
+    color:#B21F24; /* Switctes white text to red on hover. */
+    background-color: rgba(255, 255, 255, 0.8); /* Loses most of the transparency and gains brightness on hover - helps with reading the red text. */
 }
 
 /* --------------------------------------------------------- */
 
 /* -------- Footer Styles -------- */
 footer {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    background-color: #ffffff;
+    margin: 0; /* Reset browser defaults & ensures a flush edge from the content & viewport edge. */
+    padding: 0; /* As above. */
+    background-color: #ffffff; /* A solid white background colour to show a clear separation from the content above. */
 }
 
 .footer-box {
-    left: 0;
-    top: 0;
-    height: 4vh;
-    width: 100%;
+    height: 4vh; /* The container will only cover the remaining 4% of the viewport height. Great for responsivness as it's relative and not absolute. */
+    width: 100%; /* Fills the entire width of the body. */
 }
 
 .footer-text {
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 2vw;
-    height: 100%;
-    align-items: center;
+    display: flex; /* Allows the nested items to be easily positioned to design. */
+    justify-content: space-between; /* This keeps the footer text on either side of the bottom of the page. */
+    padding: 0px 2vw; /* Desired padding within the button. */
+    height: 100%; /* Fills the entire height of the footer-box container. */
+    align-items: center; /* Keeps the items within the center of this container, vertically. */
 }
 
-.footer-nav {
+/* .footer-nav {
     height: 100px;
     display: flex;
     align-self: center;
     justify-content: center;
-}
+} */
 
-.footer-nav-ul {
-    list-style: none; /* To remove list item markers. */
-    padding: 0; /* No padding is needed for the unordered list within the nav. Eliminates any browser-defaults that may be applied when rendering. */
-    margin: 0; /* Same as padding. */
-    display: flex; /* Allows the nested ul items to be responsive to various screen sizes. This maintains the stretch across the screen (100% width). */
-    justify-content: center; /* Maintains a central position. */
-    align-items: center; /* Align items to the center regardless of flex items. */
+/* .footer-nav-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
-}
+} */
 
-.footer-nav-ul li {
-    margin: 0 45px; /* Desired spacing between each list item. */
+/* .footer-nav-ul li {
+    margin: 0 45px;
     background-color: #B21F24;
     box-shadow: 2px 5px 5px #4a4a4a;
     border-radius: 68px;
-}
+} */
 
-.footer-nav-ul a {
-    text-decoration: none; /* Remove default formatting from anchor tags (e.g. underline). */
+/* .footer-nav-ul a {
+    text-decoration: none;
     color: white;
-    transition: color 0.3s; /* To change the text colour and show coloured borders above and below - will be triggered by mouse hover. */
-}
+    transition: color 0.3s;
+} */
 
 /* --------------------------------------------------------- */
 
