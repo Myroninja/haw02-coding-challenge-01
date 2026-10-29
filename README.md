@@ -6,8 +6,10 @@ Create a personal portfolio webpage showcasing your skills, projects, and contac
 
 <b><ins>What I Built:</ins></b>
 <br>
-&ast;in progress&ast;
+A portfolio page for myself.
+<br>
+It features a navigation bar with links to relevant pages, reactive styling, and a footer.
 
 <b><ins>Live Deployment Link:</ins></b>
 <br>
-n/a
+[Live Preview](https://myroninja.github.io/haw02-coding-challenge-01/)
