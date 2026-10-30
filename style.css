@@ -125,7 +125,7 @@ body {
 .greeting-box:hover {
     background-color: rgba(130, 130, 130, 0.9); /* Loses most of the transparency and gains brightness on hover - helps with reading the black text. */
     box-shadow: inset 0px 0px 20px 8px rgba(210,210,210,0.8); /* An effect to give the illusion of illumination on hover. */
-    color: black; /* Switctes white text to black on hover - helps with reading against the brighter, less transparent background. */
+    color: black; /* Switches white text to black on hover - helps with reading against the brighter, less transparent background. */
 }
 
 .name-box h1 {
@@ -133,6 +133,7 @@ body {
     text-align: left; /* Ensures the text is aligned to the left. */
     letter-spacing: 1rem; /* Desired spacing between each letter of text. */
     font-size: clamp(1rem, 3vw + 1rem, 4.5rem); /* A formula to set the minimum, desired, and maximum text sizes for bettter responsiveness. */
+    cursor: default; /* Prevents the text cursor from appearing when hovering the mouse of the text. */
 }
 
 .greeting-box p {
@@ -141,6 +142,7 @@ body {
     border-radius: 1.5rem; /* Rounded edges to maintain the overall design. */
     text-align: left; /* Ensures the text is aligned to the left. */
     font-weight: 600; /* Added weight to the font of choice (Alumni Regular) for better reading. */
+    cursor: default; /* Prevents the text cursor from appearing when hovering the mouse of the text. */
 }
 
 .greeting-box {
