@@ -12,4 +12,4 @@ It features a navigation bar with links to relevant pages, reactive styling, and
 
 <b><ins>Live Deployment Link:</ins></b>
 <br>
-[Live Preview](https://myroninja.github.io/haw02-coding-challenge-01/)
+[Live Preview](https://myroninja.github.io/haw02-coding-challenge-01/index.html)
