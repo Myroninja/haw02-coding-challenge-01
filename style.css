@@ -133,7 +133,7 @@ body {
     text-align: left; /* Ensures the text is aligned to the left. */
     letter-spacing: 1rem; /* Desired spacing between each letter of text. */
     font-size: clamp(1rem, 3vw + 1rem, 4.5rem); /* A formula to set the minimum, desired, and maximum text sizes for bettter responsiveness. */
-    cursor: default; /* Prevents the text cursor from appearing when hovering the mouse of the text. */
+    cursor: default; /* Prevents the text cursor from appearing when hovering the mouse over the text. */
 }
 
 .greeting-box p {
@@ -142,7 +142,7 @@ body {
     border-radius: 1.5rem; /* Rounded edges to maintain the overall design. */
     text-align: left; /* Ensures the text is aligned to the left. */
     font-weight: 600; /* Added weight to the font of choice (Alumni Regular) for better reading. */
-    cursor: default; /* Prevents the text cursor from appearing when hovering the mouse of the text. */
+    cursor: default; /* Prevents the text cursor from appearing when hovering the mouse over the text. */
 }
 
 .greeting-box {
