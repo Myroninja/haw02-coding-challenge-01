@@ -31,16 +31,20 @@
 /* --------------------------------------------------------- */
 
 /* -------- Navigation Bar Styles -------- */
+/* -------- Navigation Bar Styles -------- */
 .top-bar {
     display: flex; /* Allows ease with positioning of contained elements. */
     width: 100%; /* Percentage used to better support responsiveness. */
     justify-content: space-between; /* This keeps the logo and nav bar on either side of the top of the page. */
-    z-index: 1000; /* Ensures the logo and navigation are available by staying above all other elements. */
 }
 
 .navigation-main {
     align-self: center; /* This keeps the bar central vertically relative to the logo/any other elements within the parent container. */
-    margin-right: calc(100% / 50); /* The desired margin away from the right edge of the viewport. Using a percentage-based calculation helps with responsiveness. */
+    max-width: 815px;
+    display: flex;
+    justify-content: center;
+    margin-right: 2vw;
+    z-index: 1000; /* Ensures the logo and navigation are available by staying above all other elements. */
 }
 
 .nav-ul {
@@ -50,16 +54,20 @@
     display: flex; /* Allows the nested ul items to be easily positioned in a row along with any other additional positional styling. */
     border-radius: 68px; /* Completely rounded edges by choice. May need to adjust unit of choice for better responsiveness. */
     background-color: rgba(255, 255, 255, 1); /* Desired background colour - a strong white to contrast the darker background & vivid highlights. */
+    box-sizing: border-box;
 }
 
 .nav-ul li {
-    margin: 0 45px; /* Desired spacing between each list item. May need to adjust unit of choice for better responsiveness. */
+    display: flex;
+    align-content: center;
+    margin: 0 1vw;
 }
 
 .nav-ul a {
     text-decoration: none; /* Remove default formatting from anchor tags (e.g. underline). */
     color: #000000; /* Solid black for best possible contrast to the white background. */
     transition: color 0.15s; /* Short transition time for the text colour - gives a snappy and direct feel. */
+    font-size: clamp(0.5rem, 0.8vw + 1rem, 2.5rem);
 }
 
 .nav-ul a:hover {
@@ -69,13 +77,16 @@
 
 /* -------- Header Styles -------- */
 .logo-container {
-    margin-left: calc(100% / 250); /* The desired margin away from the left edge of the viewport. Using a percentage-based calculation helps with responsiveness. */
+    display: flex;
+    margin-left: 0;
     align-self: center; /* Keeps the image within the center of this container, vertically. */
+    z-index: 1000; /* Ensures the logo and navigation are available by staying above all other elements. */
 }
 
 .logo {
     max-width: 300px; /* A hard cap of the logo size. May need to adjust unit of choice for better responsiveness. */
     cursor: pointer; /* Indicates the user can click the image. Doing so opens the Home/index page. */
+    width: 20vw;
 }
 
 /* --------------------------------------------------------- */
